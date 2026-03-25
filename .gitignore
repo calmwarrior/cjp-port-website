@@ -43,3 +43,5 @@ _assets/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel

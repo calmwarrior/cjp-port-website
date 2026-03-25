@@ -11,7 +11,18 @@
       "Bash(node -e \"const l = require\\(''lucide-react''\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\(''linked''\\)\\).join\\('', ''\\)\\)\")",
       "Bash(node -e \"const l = require\\(''lucide-react''\\); const keys = Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\(''link''\\)\\); console.log\\(keys.join\\('', ''\\)\\)\")",
       "Bash(npm run:*)",
-      "Bash(gh repo:*)"
+      "Bash(gh repo:*)",
+      "mcp__49eaf062-fe01-4dc8-a890-fc561142b694__deploy_to_vercel",
+      "Bash(npm list:*)",
+      "Bash(vercel --yes --prod)",
+      "Bash(pip install:*)",
+      "Bash(nslookup carolinajofre.com)",
+      "Bash(vercel domains:*)",
+      "mcp__49eaf062-fe01-4dc8-a890-fc561142b694__list_projects",
+      "Bash(curl -sI https://carolinajofre.com)",
+      "Bash(nslookup -type=NS carolinajofre.com 8.8.8.8)",
+      "WebSearch",
+      "WebFetch(domain:support.wix.com)"
     ]
   }
 }
