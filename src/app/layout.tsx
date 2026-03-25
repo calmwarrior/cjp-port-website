@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/data/siteConfig";
@@ -19,6 +21,20 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
+  keywords: [
+    "UX Designer",
+    "CX Strategist",
+    "Senior Product Designer",
+    "User Experience",
+    "Customer Experience",
+    "Design Systems",
+    "Financial Services UX",
+    "London",
+    "Portfolio",
+    "Carolina Jofre",
+  ],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
@@ -35,6 +51,48 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
+
+// JSON-LD structured data for Google
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  jobTitle: "Senior UX Designer & CX Strategist",
+  description: siteConfig.description,
+  email: siteConfig.email,
+  sameAs: [siteConfig.linkedin],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "London",
+    addressCountry: "GB",
+  },
+  knowsLanguage: ["English", "Spanish", "German", "Italian"],
+  alumniOf: [
+    {
+      "@type": "EducationalOrganization",
+      name: "Pontificia Universidad Católica de Chile",
+    },
+    {
+      "@type": "EducationalOrganization",
+      name: "Universidad Diego Portales",
+    },
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "Konrad Group",
   },
 };
 
@@ -45,6 +103,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${plusJakarta.variable} h-full antialiased`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <a href="#main-content" className="skip-to-content">
           Skip to content
@@ -54,6 +118,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
