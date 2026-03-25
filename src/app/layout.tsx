@@ -104,10 +104,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plusJakarta.variable} h-full antialiased`}>
       <head>
+        <meta name="designer" content="calmwarrior" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Built by calmwarrior */}
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <a href="#main-content" className="skip-to-content">
