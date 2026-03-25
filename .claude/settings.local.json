@@ -6,7 +6,12 @@
       "Bash(mv *.pdf _assets/)",
       "Read(//c/Users/nicco/Projects/**)",
       "Bash(mv cjp-port-website/_assets /tmp/cjp-assets)",
-      "Bash(npx create-next-app@latest cjp-port-website --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --yes)"
+      "Bash(npx create-next-app@latest cjp-port-website --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install:*)",
+      "Bash(node -e \"const l = require\\(''lucide-react''\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\(''linked''\\)\\).join\\('', ''\\)\\)\")",
+      "Bash(node -e \"const l = require\\(''lucide-react''\\); const keys = Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\(''link''\\)\\); console.log\\(keys.join\\('', ''\\)\\)\")",
+      "Bash(npm run:*)",
+      "Bash(gh repo:*)"
     ]
   }
 }

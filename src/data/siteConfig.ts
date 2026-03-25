@@ -1,0 +1,31 @@
+export const siteConfig = {
+  name: "Carolina Jofre Pfeil",
+  shortName: "CJP",
+  title: "Carolina Jofre - Senior UX Designer & CX Strategist",
+  description:
+    "Senior UX Designer and CX Strategist with 15+ years of experience delivering end-to-end digital products for global brands. Based in London.",
+  url: "https://carolinajofre.com",
+  email: "hola@carolinajofre.com",
+  linkedin: "https://www.linkedin.com/in/carolina-jofre",
+  location: "London, United Kingdom",
+  tagline: "Shaping experiences where design strategy meets human insight.",
+  capabilities: [
+    "UX Strategy",
+    "CX Design",
+    "Service Design",
+    "Design Systems",
+    "User Research",
+    "Workshop Facilitation",
+    "Brand Experience",
+    "Product Design",
+  ],
+  clients: [
+    { name: "LEGO", logo: "/images/clients/lego.svg" },
+    { name: "Samsung", logo: "/images/clients/samsung.svg" },
+    { name: "Johnson & Johnson", logo: "/images/clients/jj.svg" },
+    { name: "Barclays", logo: "/images/clients/barclays.svg" },
+    { name: "LSEG", logo: "/images/clients/lseg.svg" },
+    { name: "Copec", logo: "/images/clients/copec.svg" },
+    { name: "BMW", logo: "/images/clients/bmw.svg" },
+  ],
+};
