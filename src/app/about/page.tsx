@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import { Timeline } from "@/components/about/Timeline";
 import { SkillsGrid } from "@/components/about/SkillsGrid";
@@ -7,7 +8,7 @@ import { education } from "@/data/experience";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Senior UX Designer and CX Strategist with 15+ years of experience across agencies, startups, and enterprise in Chile, Germany, and the UK.",
+    "Senior UX Designer and CX Strategist with 15+ years of experience across agencies, startups, and enterprise in Chile and the UK.",
 };
 
 export default function AboutPage() {
@@ -18,11 +19,15 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-12 md:gap-16">
           {/* Portrait placeholder */}
           <AnimateOnScroll>
-            <div className="aspect-[3/4] rounded-xl bg-neutral-100 overflow-hidden flex items-center justify-center">
-              <div className="text-center text-text-muted">
-                <div className="w-20 h-20 rounded-full bg-neutral-200 mx-auto mb-3" />
-                <p className="text-sm">Portrait photo</p>
-              </div>
+            <div className="aspect-[3/4] rounded-xl bg-neutral-100 overflow-hidden">
+              <Image
+                src="/images/about/portrait.jpg"
+                alt="Carolina Jofre Pfeil"
+                width={600}
+                height={800}
+                className="w-full h-full object-cover object-top"
+                priority
+              />
             </div>
           </AnimateOnScroll>
 
@@ -54,9 +59,9 @@ export default function AboutPage() {
 
             <AnimateOnScroll delay={0.3}>
               <p className="mt-4 text-text-secondary leading-relaxed">
-                Chilean-German by heritage, London-based by choice. Over fifteen
+                Chilean by heritage, London-based by choice. Over fifteen
                 years, I&apos;ve collaborated with teams and partnered with clients
-                across Chile, Germany, and the United Kingdom &mdash; working
+                across Chile and the United Kingdom &mdash; working
                 independently and with agencies such as Interbrand, Oliver, Grey,
                 and Daw. I speak English, Spanish, German, and some Italian.
                 Today, I&apos;m a Senior UX Designer at Konrad Group in London,

@@ -15,8 +15,7 @@ export function AboutTeaser() {
           <AnimateOnScroll delay={0.1}>
             <p className="text-2xl md:text-3xl font-semibold text-foreground leading-snug">
               A curious CX consultant and designer with 15+ years across
-              agencies, startups, and enterprise &mdash; in Chile, Germany,
-              and the UK.
+              agencies, startups, and enterprise &mdash; in Chile and the UK.
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.2}>

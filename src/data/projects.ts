@@ -9,7 +9,7 @@ export const projects: Project[] = [
     agency: "Konrad Group",
     year: 2025,
     role: "Senior Product Designer (Embedded)",
-    duration: "6 months",
+    duration: "9 months",
     tools: ["Figma", "Design Systems", "Accessibility (WCAG)", "Usability Testing", "Component Libraries"],
     category: "Product Design \u00b7 Financial Services",
     coverImage: "/images/projects/retailer/cover.jpg",

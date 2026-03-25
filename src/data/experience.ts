@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
     location: "London, United Kingdom",
     startYear: 2023,
     description:
-      "Leading end-to-end design across simultaneous client engagements \u2014 from discovery and user research through to production-ready Figma assets and engineering handoff. Most recently embedded within a leading UK retailer's product team for 6 months, working directly on financial services UX for their money and home insurance digital journeys.",
+      "Leading end-to-end design across simultaneous client engagements \u2014 from discovery and user research through to production-ready Figma assets and engineering handoff. Most recently embedded within a leading UK retailer's product team for 9 months, working directly on financial services UX for their money and home insurance digital journeys.",
     highlights: [
       "Established scalable component libraries and reusable interaction frameworks",
       "Embedded within a leading UK retailer's internal product design team",

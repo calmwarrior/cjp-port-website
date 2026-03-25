@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Senior UX Designer and CX Strategist with 15+ years of experience delivering end-to-end digital products for global brands. Based in London.",
   url: "https://carolinajofre.com",
-  email: "hola@carolinajofre.com",
+  email: "jofrecarolina@gmail.com",
   linkedin: "https://www.linkedin.com/in/carolina-jofre",
   location: "London, United Kingdom",
   tagline: "Shaping experiences where design strategy meets human insight.",
