@@ -59,7 +59,7 @@ export default function AboutPage() {
 
             <AnimateOnScroll delay={0.3}>
               <p className="mt-4 text-text-secondary leading-relaxed">
-                Chilean by heritage, London-based by choice. Over fifteen
+                Chilean-German by heritage, London-based by choice. Over fifteen
                 years, I&apos;ve collaborated with teams and partnered with clients
                 across Chile and the United Kingdom &mdash; working
                 independently and with agencies such as Interbrand, Oliver, Grey,
