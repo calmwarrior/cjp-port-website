@@ -11,6 +11,7 @@ export interface Project {
   category: string;
   coverImage: string;
   coverColor: string;
+  coverPosition?: string;
   challenge: string;
   process: ProcessStep[];
   result: string;

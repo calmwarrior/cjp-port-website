@@ -17,7 +17,7 @@ export function ProjectGrid() {
           </h2>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <AnimateOnScroll key={project.slug} delay={index * 0.1}>
               <Link href={`/work/${project.slug}`} className="group block">
@@ -26,7 +26,7 @@ export function ProjectGrid() {
                 >
                   {/* Cover image area */}
                   <div
-                    className="aspect-[3/1] relative overflow-hidden"
+                    className="aspect-[4/3] relative overflow-hidden"
                     style={{ backgroundColor: project.coverColor + "15" }}
                   >
                     <Image
@@ -34,6 +34,7 @@ export function ProjectGrid() {
                       alt={project.title}
                       fill
                       className="object-cover"
+                      style={{ objectPosition: project.coverPosition || "center" }}
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute top-4 right-4 z-10">
@@ -47,7 +48,7 @@ export function ProjectGrid() {
                   <div className="p-6">
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors leading-snug">
+                        <h3 className="font-semibold text-lg text-foreground leading-snug">
                           {project.title}
                         </h3>
                         <p className="mt-2 text-sm text-text-muted">
@@ -56,7 +57,7 @@ export function ProjectGrid() {
                           {project.year}
                         </p>
                       </div>
-                      <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
+                      <ArrowUpRight className="w-5 h-5 text-text-muted flex-shrink-0 mt-1" />
                     </div>
                     <p className="mt-3 text-sm text-text-secondary line-clamp-2">
                       {project.subtitle}

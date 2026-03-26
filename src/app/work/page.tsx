@@ -26,14 +26,14 @@ export default function WorkPage() {
           </p>
         </AnimateOnScroll>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:gap-8">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <AnimateOnScroll key={project.slug} delay={index * 0.1}>
               <Link href={`/work/${project.slug}`} className="group block">
-                <article className="border border-border bg-surface hover:border-primary/30 transition-colors">
+                <article className="border border-border bg-surface hover:border-foreground/20 transition-colors">
                   {/* Image area */}
                   <div
-                    className="aspect-[3/1] overflow-hidden relative"
+                    className="aspect-[4/3] overflow-hidden relative"
                     style={{ backgroundColor: project.coverColor + "15" }}
                   >
                     <Image
@@ -41,6 +41,7 @@ export default function WorkPage() {
                       alt={project.title}
                       fill
                       className="object-cover"
+                      style={{ objectPosition: project.coverPosition || "center" }}
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
@@ -55,7 +56,7 @@ export default function WorkPage() {
                         {project.year}
                       </span>
                     </div>
-                    <h2 className="text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
+                    <h2 className="text-xl md:text-2xl font-semibold text-foreground leading-snug">
                       {project.title}
                     </h2>
                     <p className="mt-2 text-sm text-text-muted">
@@ -66,7 +67,7 @@ export default function WorkPage() {
                     <p className="mt-3 text-sm text-text-secondary line-clamp-2">
                       {project.challenge.slice(0, 160)}...
                     </p>
-                    <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                    <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground">
                       Read case study
                       <ArrowUpRight className="w-4 h-4" />
                     </div>
