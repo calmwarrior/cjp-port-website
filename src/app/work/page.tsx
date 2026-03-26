@@ -8,7 +8,7 @@ import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected case studies showcasing UX design, CX strategy, and brand experience work for global brands including LEGO, J&J, and more.",
+    "Selected UX design and CX strategy case studies for global brands including LEGO, Barclays, Samsung, and J&J. End-to-end product design, service design, and brand experience projects across the UK, Chile, and internationally. Proyectos de diseño UX para marcas globales.",
 };
 
 export default function WorkPage() {

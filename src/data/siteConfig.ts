@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Carolina Jofre Pfeil",
   shortName: "CJP",
-  title: "Carolina Jofre - Senior UX Designer & CX Strategist",
+  title: "Carolina Jofre Pfeil - Senior UX Designer & CX Strategist | London, UK",
   description:
-    "Senior UX Designer and CX Strategist with 15+ years of experience delivering end-to-end digital products for global brands. Based in London.",
+    "Senior UX Designer and CX Strategist with 15+ years of experience delivering end-to-end digital products for global brands across the UK, Chile, Spain, Germany, and Italy. Bilingual English/Spanish. Based in London.",
   url: "https://carolinajofre.com",
   email: "jofrecarolina@gmail.com",
   linkedin: "https://www.linkedin.com/in/carolina-jofre",

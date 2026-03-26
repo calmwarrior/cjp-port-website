@@ -8,7 +8,7 @@ import { ContactForm } from "@/components/contact/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Carolina Jofre for UX design, CX strategy, or design consultancy opportunities.",
+    "Get in touch with Carolina Jofre Pfeil for UX design, CX strategy, or design consultancy. Available for projects in the UK, Chile, Spain, Germany, Italy, and globally. Contacto para proyectos de diseño UX y estrategia CX.",
 };
 
 export default function ContactPage() {

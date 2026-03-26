@@ -8,7 +8,7 @@ import { education } from "@/data/experience";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Senior UX Designer and CX Strategist with 15+ years of experience across agencies, startups, and enterprise in Chile and the UK.",
+    "Chilean-German UX Designer and CX Strategist based in London with 15+ years across agencies, startups, and enterprise in Chile, the UK, and internationally. Speaks English, Spanish, German, and Italian. Diseñadora UX chileno-alemana con experiencia internacional.",
 };
 
 export default function AboutPage() {
