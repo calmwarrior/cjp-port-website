@@ -53,7 +53,7 @@ export default async function WorkPage({
                       src={project.coverImage}
                       alt={project.title}
                       fill
-                      className="object-cover"
+                      className={project.coverFit === "contain" ? "object-contain" : "object-cover"}
                       style={{ objectPosition: project.coverPosition || "center" }}
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />

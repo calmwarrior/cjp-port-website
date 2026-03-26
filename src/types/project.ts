@@ -13,6 +13,7 @@ export interface Project {
   coverImage: string;
   coverColor: string;
   coverPosition?: string;
+  coverFit?: "cover" | "contain";
   challenge: string;
   process: ProcessStep[];
   result: string;
