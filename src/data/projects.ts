@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     slug: "leading-uk-retailer",
     title: "Shaping End-to-End Financial Services Journeys for a Leading UK Retailer",
-    subtitle: "Money & Home Insurance Digital Product Design",
+    subtitle: "9-Month Embedded Engagement \u00b7 Money & Home Insurance Digital Product Design",
     client: "Leading UK Retailer",
     agency: "Konrad Group",
     year: 2025,
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     result:
       "Delivered high-quality UI and interaction design across two financial services product streams, operating within established design systems and review processes. Demonstrated the ability to bring structure to ambiguity, collaborate deeply with cross-functional partners, and deliver insight-led, accessible experiences at scale in a regulated product environment. Built lasting relationships across the product design and research team.",
     resultMetrics: [
-      { value: "6mo", label: "Fully embedded engagement" },
+      { value: "9mo", label: "Fully embedded engagement" },
       { value: "2", label: "Product streams shaped" },
       { value: "WCAG", label: "Accessibility-first design" },
     ],

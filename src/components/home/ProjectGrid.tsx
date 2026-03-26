@@ -17,7 +17,7 @@ export function ProjectGrid() {
           </h2>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <AnimateOnScroll key={project.slug} delay={index * 0.1}>
               <Link href={`/work/${project.slug}`} className="group block">
