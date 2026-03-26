@@ -202,7 +202,7 @@ export const projects: Project[] = [
     duration: "8 months",
     tools: ["Figma", "Firebase", "Design Sprints", "Service Blueprint"],
     category: "UX / CX Design",
-    coverImage: "/images/projects/chiletur/cover.jpg",
+    coverImage: "/images/projects/chiletur/cover.jpeg",
     coverColor: "#1B5E20",
     challenge:
       "For over 60 years, Chile's largest petrol company had published physical tourist guides. The product was well-established but had shallow penetration among international tourists and the 18-35 age group \u2014 and zero online presence. The question wasn't whether to go digital, but how to create an omnichannel experience that enhanced rather than replaced the physical product.",
@@ -235,7 +235,7 @@ export const projects: Project[] = [
       { value: "4+ yrs", label: "Strategy still in use" },
     ],
     images: [
-      "/images/projects/chiletur/process-01.jpg",
+      "/images/projects/chiletur/process-01.jpeg",
       "/images/projects/chiletur/process-02.jpg",
       "/images/projects/chiletur/result-01.jpg",
     ],
