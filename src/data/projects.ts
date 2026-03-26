@@ -203,6 +203,7 @@ export const projects: Project[] = [
     tools: ["Figma", "Firebase", "Design Sprints", "Service Blueprint"],
     category: "UX / CX Design",
     coverImage: "/images/projects/chiletur/cover.jpeg",
+    heroImage: "/images/projects/chiletur/process-01.jpeg",
     coverColor: "#1B5E20",
     challenge:
       "For over 60 years, Chile's largest petrol company had published physical tourist guides. The product was well-established but had shallow penetration among international tourists and the 18-35 age group \u2014 and zero online presence. The question wasn't whether to go digital, but how to create an omnichannel experience that enhanced rather than replaced the physical product.",
@@ -252,6 +253,7 @@ export const projects: Project[] = [
     tools: ["Figma", "Miro", "Brand Workshops", "User Interviews"],
     category: "Brand Strategy",
     coverImage: "/images/projects/cero/cover.jpg",
+    heroImage: "/images/projects/cero/landing-page.jpg",
     coverColor: "#0A1628",
     challenge:
       "Botlab faced a market environment in Spanish-speaking countries characterised by a lack of understanding of chatbot technology, scepticism about the value of customer experience, and a resistant B2B market. The challenge was dual: make the technology approachable for a sceptical market, and position the company to win competitive startup funding.",
