@@ -252,7 +252,7 @@ export const projects: Project[] = [
     tools: ["Figma", "Miro", "Brand Workshops", "User Interviews"],
     category: "Brand Strategy",
     coverImage: "/images/projects/cero/cover.jpg",
-    coverColor: "#6C63FF",
+    coverColor: "#0A1628",
     challenge:
       "Botlab faced a market environment in Spanish-speaking countries characterised by a lack of understanding of chatbot technology, scepticism about the value of customer experience, and a resistant B2B market. The challenge was dual: make the technology approachable for a sceptical market, and position the company to win competitive startup funding.",
     process: [
@@ -284,6 +284,7 @@ export const projects: Project[] = [
       { value: "New", label: "Market positioning achieved" },
     ],
     images: [
+      "/images/projects/cero/landing-page.jpg",
       "/images/projects/cero/feedback-chat.jpg",
       "/images/projects/cero/feedback-respuestas.jpg",
       "/images/projects/cero/process-01.jpg",
