@@ -34,7 +34,7 @@ export default function ContactPage() {
                   href={`mailto:${siteConfig.email}`}
                   className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <div className="w-10 h-10 bg-neutral-100 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                     <Mail className="w-5 h-5" />
                   </div>
                   <span className="text-sm font-medium">{siteConfig.email}</span>
@@ -46,7 +46,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <div className="w-10 h-10 bg-neutral-100 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                     <LinkedInIcon className="w-5 h-5" />
                   </div>
                   <span className="text-sm font-medium">
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 </a>
 
                 <div className="flex items-center gap-3 text-text-secondary">
-                  <div className="w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center">
+                  <div className="w-10 h-10 bg-neutral-100 flex items-center justify-center">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <span className="text-sm">{siteConfig.location}</span>

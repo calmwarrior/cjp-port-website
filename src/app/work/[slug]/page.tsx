@@ -114,7 +114,7 @@ export default async function CaseStudyPage({
         {/* Cover image */}
         <AnimateOnScroll delay={0.2}>
           <div
-            className="mt-12 aspect-[21/9] rounded-xl overflow-hidden relative"
+            className="mt-12 aspect-[21/9] overflow-hidden relative"
             style={{ backgroundColor: project.coverColor + "12" }}
           >
             <Image

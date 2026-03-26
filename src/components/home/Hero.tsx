@@ -49,13 +49,13 @@ export function Hero() {
           >
             <Link
               href="/work"
-              className="inline-flex items-center px-6 py-3 bg-foreground text-background font-medium text-sm rounded-lg hover:bg-neutral-800 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-foreground text-background font-medium text-sm hover:bg-neutral-800 transition-colors"
             >
               See my work
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center px-6 py-3 border border-border text-foreground font-medium text-sm rounded-lg hover:bg-neutral-100 transition-colors"
+              className="inline-flex items-center px-6 py-3 border border-border text-foreground font-medium text-sm hover:bg-neutral-100 transition-colors"
             >
               Get in touch
             </Link>

@@ -22,9 +22,7 @@ export function ProjectGrid() {
             <AnimateOnScroll key={project.slug} delay={index * 0.1}>
               <Link href={`/work/${project.slug}`} className="group block">
                 <motion.article
-                  whileHover={{ y: -4 }}
-                  transition={{ duration: 0.2 }}
-                  className="relative overflow-hidden rounded-xl border border-border bg-surface"
+                  className="relative overflow-hidden border border-border bg-surface"
                 >
                   {/* Cover image area */}
                   <div
@@ -35,7 +33,7 @@ export function ProjectGrid() {
                       src={project.coverImage}
                       alt={project.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute top-4 right-4 z-10">

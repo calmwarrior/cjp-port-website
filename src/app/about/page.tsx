@@ -19,7 +19,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-12 md:gap-16">
           {/* Portrait placeholder */}
           <AnimateOnScroll>
-            <div className="aspect-[3/4] rounded-xl bg-neutral-100 overflow-hidden">
+            <div className="aspect-[3/4] bg-neutral-100 overflow-hidden">
               <Image
                 src="/images/about/portrait.jpg"
                 alt="Carolina Jofre Pfeil"
@@ -92,7 +92,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {education.map((edu, index) => (
               <AnimateOnScroll key={index} delay={index * 0.1}>
-                <div className="p-6 rounded-xl border border-border bg-surface">
+                <div className="p-6 border border-border bg-surface">
                   <p className="text-xs text-text-muted mb-2">{edu.years}</p>
                   <h3 className="font-semibold text-foreground">{edu.degree}</h3>
                   <p className="mt-1 text-sm text-text-secondary">

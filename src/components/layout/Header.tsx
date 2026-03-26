@@ -39,7 +39,7 @@ export function Header() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isScrolled
-            ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm"
+            ? "bg-background/90 backdrop-blur-md border-b border-border"
             : "bg-transparent"
         )}
       >
@@ -105,7 +105,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "text-lg font-medium py-3 px-4 rounded-lg transition-colors",
+                    "text-lg font-medium py-3 px-4 transition-colors",
                     pathname === link.href || pathname.startsWith(link.href + "/")
                       ? "text-foreground bg-neutral-100"
                       : "text-text-muted hover:text-foreground hover:bg-neutral-100"

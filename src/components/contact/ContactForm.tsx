@@ -35,7 +35,7 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="p-8 rounded-xl border border-border bg-surface text-center">
+      <div className="p-8 border border-border bg-surface text-center">
         <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
           <Send className="w-5 h-5 text-green-600" />
         </div>
@@ -61,7 +61,7 @@ export function ContactForm() {
           id="name"
           name="name"
           required
-          className="w-full px-4 py-3 rounded-lg border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+          className="w-full px-4 py-3 border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
           placeholder="Your name"
         />
       </div>
@@ -78,7 +78,7 @@ export function ContactForm() {
           id="email"
           name="email"
           required
-          className="w-full px-4 py-3 rounded-lg border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+          className="w-full px-4 py-3 border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
           placeholder="your@email.com"
         />
       </div>
@@ -95,7 +95,7 @@ export function ContactForm() {
           name="message"
           required
           rows={5}
-          className="w-full px-4 py-3 rounded-lg border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
+          className="w-full px-4 py-3 border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
           placeholder="Tell me about your project..."
         />
       </div>
@@ -103,7 +103,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-medium text-sm rounded-lg hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-medium text-sm hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === "sending" ? (
           "Sending..."

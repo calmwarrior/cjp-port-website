@@ -26,27 +26,27 @@ export default function WorkPage() {
           </p>
         </AnimateOnScroll>
 
-        <div className="mt-16 space-y-8">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <AnimateOnScroll key={project.slug} delay={index * 0.1}>
               <Link href={`/work/${project.slug}`} className="group block">
-                <article className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-6 md:gap-10 p-6 md:p-8 rounded-xl border border-border bg-surface hover:border-primary/30 transition-colors">
+                <article className="border border-border bg-surface hover:border-primary/30 transition-colors">
                   {/* Image area */}
                   <div
-                    className="aspect-[16/10] rounded-lg overflow-hidden relative"
+                    className="aspect-[16/10] overflow-hidden relative"
                     style={{ backgroundColor: project.coverColor + "15" }}
                   >
                     <Image
                       src={project.coverImage}
                       alt={project.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
 
                   {/* Content */}
-                  <div className="flex flex-col justify-center">
+                  <div className="p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-xs font-medium px-3 py-1 rounded-full bg-neutral-100 text-text-secondary">
                         {project.category}
