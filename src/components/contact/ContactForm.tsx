@@ -8,47 +8,19 @@ interface ContactFormProps {
 }
 
 export function ContactForm({ dict }: ContactFormProps) {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
-    "idle"
-  );
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("sending");
 
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
-    try {
-      const response = await fetch("https://formspree.io/jofrecarolina@gmail.com", {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
-
-      if (response.ok) {
-        setStatus("sent");
-        form.reset();
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  }
-
-  if (status === "sent") {
-    return (
-      <div className="p-8 border border-border bg-surface text-center">
-        <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
-          <Send className="w-5 h-5 text-green-600" />
-        </div>
-        <h3 className="text-lg font-semibold text-foreground">{dict.contact.sent}</h3>
-        <p className="mt-2 text-sm text-text-secondary">
-          {dict.contact.sentDetail}
-        </p>
-      </div>
+    const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Hi Carolina,\n\n${message}\n\n—\n${name}\n${email}`
     );
+
+    window.location.href = `mailto:jofrecarolina@gmail.com?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -65,6 +37,8 @@ export function ContactForm({ dict }: ContactFormProps) {
           id="name"
           name="name"
           required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           className="w-full px-4 py-3 border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
           placeholder={dict.contact.namePlaceholder}
         />
@@ -82,6 +56,8 @@ export function ContactForm({ dict }: ContactFormProps) {
           id="email"
           name="email"
           required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           className="w-full px-4 py-3 border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
           placeholder={dict.contact.emailPlaceholder}
         />
@@ -99,6 +75,8 @@ export function ContactForm({ dict }: ContactFormProps) {
           name="message"
           required
           rows={5}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           className="w-full px-4 py-3 border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
           placeholder={dict.contact.messagePlaceholder}
         />
@@ -106,24 +84,11 @@ export function ContactForm({ dict }: ContactFormProps) {
 
       <button
         type="submit"
-        disabled={status === "sending"}
-        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-medium text-sm hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-medium text-sm hover:bg-neutral-800 transition-colors"
       >
-        {status === "sending" ? (
-          dict.contact.sending
-        ) : (
-          <>
-            {dict.contact.send}
-            <Send className="w-4 h-4" />
-          </>
-        )}
+        {dict.contact.send}
+        <Send className="w-4 h-4" />
       </button>
-
-      {status === "error" && (
-        <p className="text-sm text-red-600">
-          {dict.contact.error}
-        </p>
-      )}
     </form>
   );
 }
