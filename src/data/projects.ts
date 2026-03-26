@@ -245,6 +245,7 @@ export const projects: Project[] = [
     title: "Building a Human-Centred Brand for an AI-Driven Startup",
     subtitle: "Brand Strategy & Digital Experience for Y Combinator Success",
     client: "Cero (formerly Botlab)",
+    clientUrl: "https://cero.ai",
     year: 2021,
     role: "Brand Consultant & CX Strategist",
     duration: "3 months",
@@ -283,9 +284,10 @@ export const projects: Project[] = [
       { value: "New", label: "Market positioning achieved" },
     ],
     images: [
+      "/images/projects/cero/feedback-chat.jpg",
+      "/images/projects/cero/feedback-respuestas.jpg",
       "/images/projects/cero/process-01.jpg",
       "/images/projects/cero/process-02.jpg",
-      "/images/projects/cero/result-01.jpg",
     ],
   },
 ];

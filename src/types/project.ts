@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   subtitle: string;
   client: string;
+  clientUrl?: string;
   agency?: string;
   year: number;
   role: string;

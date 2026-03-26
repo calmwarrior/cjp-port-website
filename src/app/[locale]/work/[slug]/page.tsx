@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects, getProjectBySlug, getNextProject } from "@/data/projects";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import { ResultMetrics } from "@/components/work/ResultMetrics";
 import { ProcessSteps } from "@/components/work/ProcessSteps";
@@ -76,7 +76,13 @@ export default async function CaseStudyPage({
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-border">
             <div>
               <p className="text-xs text-text-muted uppercase tracking-wide font-medium">Client</p>
-              <p className="mt-1 text-sm font-medium text-foreground">{project.client}</p>
+              <p className="mt-1 text-sm font-medium text-foreground">
+                {project.clientUrl ? (
+                  <a href={project.clientUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    {project.client} <ArrowUpRight className="w-3 h-3 inline" />
+                  </a>
+                ) : project.client}
+              </p>
             </div>
             <div>
               <p className="text-xs text-text-muted uppercase tracking-wide font-medium">Role</p>
