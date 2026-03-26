@@ -4,7 +4,12 @@ import { CJPLogo } from "@/components/ui/CJPLogo";
 import { Mail, ArrowUpRight } from "lucide-react";
 import { LinkedInIcon } from "@/components/ui/LinkedInIcon";
 
-export function Footer() {
+interface FooterProps {
+  locale: string;
+  dict: any;
+}
+
+export function Footer({ locale, dict }: FooterProps) {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12 md:py-16">
@@ -13,30 +18,29 @@ export function Footer() {
           <div className="space-y-4">
             <CJPLogo />
             <p className="text-sm text-text-muted max-w-xs">
-              Senior UX Designer & CX Strategist based in London.
-              Shaping experiences where design strategy meets human insight.
+              {dict.footer.tagline}
             </p>
           </div>
 
           {/* Navigation */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-foreground">Navigation</h3>
+            <h3 className="text-sm font-semibold text-foreground">{dict.footer.navigation}</h3>
             <div className="flex flex-col gap-2">
-              <Link href="/work" className="text-sm text-text-muted hover:text-foreground transition-colors">
-                Work
+              <Link href={`/${locale}/work`} className="text-sm text-text-muted hover:text-foreground transition-colors">
+                {dict.nav.work}
               </Link>
-              <Link href="/about" className="text-sm text-text-muted hover:text-foreground transition-colors">
-                About
+              <Link href={`/${locale}/about`} className="text-sm text-text-muted hover:text-foreground transition-colors">
+                {dict.nav.about}
               </Link>
-              <Link href="/contact" className="text-sm text-text-muted hover:text-foreground transition-colors">
-                Contact
+              <Link href={`/${locale}/contact`} className="text-sm text-text-muted hover:text-foreground transition-colors">
+                {dict.nav.contact}
               </Link>
             </div>
           </div>
 
           {/* Contact */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-foreground">Get in touch</h3>
+            <h3 className="text-sm font-semibold text-foreground">{dict.footer.getInTouch}</h3>
             <div className="flex flex-col gap-2">
               <a
                 href={`mailto:${siteConfig.email}`}
@@ -61,7 +65,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-xs text-text-muted">
-            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. {dict.footer.rights}
           </p>
         </div>
       </div>

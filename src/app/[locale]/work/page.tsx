@@ -4,34 +4,47 @@ import Link from "next/link";
 import { projects } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
 import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
+import { getDictionary } from "@/lib/dictionaries";
+import type { Locale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "Work",
-  description:
-    "Selected UX design and CX strategy case studies for global brands including LEGO, Barclays, Samsung, and J&J. End-to-end product design, service design, and brand experience projects across the UK, Chile, and internationally. Proyectos de diseño UX para marcas globales.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as Locale);
+  return {
+    title: dict.work.title,
+    description: dict.metadata.workDescription,
+  };
+}
 
-export default function WorkPage() {
+export default async function WorkPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as Locale);
+
   return (
     <div className="pt-28 md:pt-36 pb-20 md:pb-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <AnimateOnScroll>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">
-            Selected Work
+            {dict.work.title}
           </h1>
           <p className="mt-4 text-lg text-text-secondary max-w-2xl">
-            A curated selection of projects where I helped organisations solve
-            business problems through design. Each case study goes deep on
-            context, decisions, and outcomes.
+            {dict.work.intro}
           </p>
         </AnimateOnScroll>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <AnimateOnScroll key={project.slug} delay={index * 0.1}>
-              <Link href={`/work/${project.slug}`} className="group block">
+              <Link href={`/${locale}/work/${project.slug}`} className="group block">
                 <article className="border border-border bg-surface hover:border-foreground/20 transition-colors">
-                  {/* Image area */}
                   <div
                     className="aspect-[4/3] overflow-hidden relative"
                     style={{ backgroundColor: project.coverColor + "15" }}
@@ -46,7 +59,6 @@ export default function WorkPage() {
                     />
                   </div>
 
-                  {/* Content */}
                   <div className="p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-xs font-medium px-3 py-1 rounded-full bg-neutral-100 text-text-secondary">
@@ -68,7 +80,7 @@ export default function WorkPage() {
                       {project.challenge.slice(0, 160)}...
                     </p>
                     <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground">
-                      Read case study
+                      {dict.work.readCaseStudy}
                       <ArrowUpRight className="w-4 h-4" />
                     </div>
                   </div>

@@ -6,17 +6,23 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { CJPLogo } from "@/components/ui/CJPLogo";
 import { Menu, X } from "lucide-react";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 
-const navLinks = [
-  { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+interface HeaderProps {
+  locale: string;
+  dict: any;
+}
 
-export function Header() {
+export function Header({ locale, dict }: HeaderProps) {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: `/${locale}/work`, label: dict.nav.work },
+    { href: `/${locale}/about`, label: dict.nav.about },
+    { href: `/${locale}/contact`, label: dict.nav.contact },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -46,7 +52,7 @@ export function Header() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <nav className="flex items-center justify-between h-16 md:h-20">
             <Link
-              href="/"
+              href={`/${locale}`}
               className="relative z-50"
               aria-label="Carolina Jofre - Home"
             >
@@ -72,21 +78,25 @@ export function Header() {
                   )}
                 </Link>
               ))}
+              <LanguageSwitcher locale={locale} />
             </div>
 
             {/* Mobile menu button */}
-            <button
-              className="md:hidden relative z-50 p-2 -mr-2"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-5 h-5" />
-              ) : (
-                <Menu className="w-5 h-5" />
-              )}
-            </button>
+            <div className="md:hidden flex items-center gap-2">
+              <LanguageSwitcher locale={locale} />
+              <button
+                className="relative z-50 p-2 -mr-2"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMobileMenuOpen}
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
+              </button>
+            </div>
           </nav>
         </div>
       </header>

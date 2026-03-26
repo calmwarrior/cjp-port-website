@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "title": "Carolina Jofre Pfeil - Senior UX Designer & CX Strategist | London, UK",
+    "description": "Portfolio di Carolina Jofre Pfeil — Senior UX Designer e CX Strategist con oltre 15 anni di esperienza. Designer cileno-tedesca a London, collabora con marchi globali come LEGO, Samsung, Barclays e J&J.",
+    "aboutDescription": "UX Designer e CX Strategist cileno-tedesca a London con oltre 15 anni di esperienza in agenzie, startup e aziende in Cile, nel Regno Unito e a livello internazionale. Parla inglese, spagnolo, tedesco e italiano.",
+    "workDescription": "Case Study selezionati di UX Design e CX Strategy per marchi globali tra cui LEGO, Barclays, Samsung e J&J. Progetti End-to-End di Product Design, Service Design e Brand Experience.",
+    "contactDescription": "Contatti Carolina Jofre Pfeil per UX Design, CX Strategy o consulenza di design. Disponibile per progetti a livello globale."
+  },
+  "nav": {
+    "work": "Lavori",
+    "about": "Chi sono",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "role": "Senior UX Designer & CX Strategist",
+    "description": "Progetto esperienze che collegano strategia aziendale e comprensione umana. Oltre 15 anni di esperienza nella creazione di prodotti digitali end-to-end per marchi globali — dalla CX Strategy alla UI ad alta fedeltà fino alla consegna in produzione.",
+    "cta": "Scopri i miei lavori",
+    "ctaSecondary": "Contattami"
+  },
+  "home": {
+    "selectedWork": "Lavori selezionati",
+    "trustedBy": "La fiducia di marchi globali",
+    "whatIDo": "Cosa faccio",
+    "capabilitiesIntro": "Dalla User Research alla strategia al design pronto per la produzione — lavoro sull'intero ciclo di vita dell'esperienza.",
+    "aboutSection": "Chi sono",
+    "aboutTeaser": "Una consulente CX e designer curiosa con oltre 15 anni di esperienza in agenzie, startup e aziende — in Cile e nel Regno Unito.",
+    "aboutTeaserDetail": "Il mio lavoro incentrato sul cliente ha aiutato persone e organizzazioni a esplorare nuovi modi per creare valore e riaccendere la crescita. Credo che le migliori decisioni di design nascano dalla comprensione sia del bisogno umano che del vincolo aziendale — e dalla tensione creativa che si crea tra i due.",
+    "moreAboutMe": "Scopri di più su di me"
+  },
+  "work": {
+    "title": "Lavori selezionati",
+    "intro": "Una selezione curata di progetti in cui ho aiutato organizzazioni a risolvere problemi aziendali attraverso il design. Ogni Case Study approfondisce contesto, decisioni e risultati.",
+    "readCaseStudy": "Leggi il Case Study",
+    "allProjects": "Tutti i progetti",
+    "theChallenge": "La sfida",
+    "theProcess": "Il processo",
+    "theOutcome": "Il risultato",
+    "toolsAndMethods": "Strumenti e metodi",
+    "nextProject": "Progetto successivo",
+    "step": "Fase"
+  },
+  "about": {
+    "title": "Chi sono",
+    "bio1": "Sono una consulente CX e designer curiosa con esperienza rilevante nel design digitale, nella strategia di marca e nell'innovazione aziendale. Il mio lavoro incentrato sul cliente ha aiutato persone e organizzazioni a esplorare nuovi modi per creare valore e riaccendere la crescita.",
+    "bio2": "La mia esperienza comprende lo sviluppo e il lancio di progetti di design end-to-end, così come il coinvolgimento in diverse fasi del processo di problem-solving. Con un ruolo pratico e diretto, il mio lavoro è tangibile, co-creativo e multifunzionale.",
+    "bio3": "Cileno-tedesca di origine, a London per scelta. In oltre quindici anni, ho collaborato con team e clienti in Cile e nel Regno Unito — lavorando in modo indipendente e con agenzie come Interbrand, Oliver, Grey e Daw. Parlo inglese, spagnolo, tedesco e italiano. Attualmente sono Senior UX Designer presso Konrad Group a London, embedded nel team di prodotto di un importante retailer britannico, dove lavoro sulla UX dei servizi finanziari.",
+    "experience": "Esperienza",
+    "education": "Formazione",
+    "skillsAndTools": "Competenze e strumenti"
+  },
+  "contact": {
+    "title": "Parliamone",
+    "intro": "Che Lei abbia un progetto in mente, cerchi una stratega del design o desideri semplicemente connettersi — mi farebbe piacere sentirLa.",
+    "nameLabel": "Nome",
+    "namePlaceholder": "Il Suo nome",
+    "emailLabel": "Email",
+    "emailPlaceholder": "la-sua@email.com",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Mi parli del Suo progetto...",
+    "send": "Invia messaggio",
+    "sending": "Invio in corso...",
+    "sent": "Messaggio inviato!",
+    "sentDetail": "Grazie per avermi contattata. Le risponderò al più presto.",
+    "error": "Qualcosa è andato storto. La prego di scrivermi direttamente via email.",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "tagline": "Senior UX Designer & CX Strategist a London. Creo esperienze dove la strategia di design incontra la comprensione umana.",
+    "navigation": "Navigazione",
+    "getInTouch": "Contattami",
+    "rights": "Tutti i diritti riservati."
+  },
+  "notFound": {
+    "title": "Pagina non trovata",
+    "description": "La pagina che sta cercando non esiste.",
+    "goHome": "Torna alla home"
+  }
+}

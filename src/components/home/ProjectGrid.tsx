@@ -7,20 +7,25 @@ import { projects } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
 import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 
-export function ProjectGrid() {
+interface ProjectGridProps {
+  dict: any;
+  locale: string;
+}
+
+export function ProjectGrid({ dict, locale }: ProjectGridProps) {
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <AnimateOnScroll>
           <h2 className="text-sm font-semibold text-primary tracking-wide uppercase mb-12">
-            Selected Work
+            {dict.home.selectedWork}
           </h2>
         </AnimateOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <AnimateOnScroll key={project.slug} delay={index * 0.1}>
-              <Link href={`/work/${project.slug}`} className="group block">
+              <Link href={`/${locale}/work/${project.slug}`} className="group block">
                 <motion.article
                   className="relative overflow-hidden border border-border bg-surface"
                 >

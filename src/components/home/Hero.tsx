@@ -4,7 +4,12 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { ArrowDown } from "lucide-react";
 
-export function Hero() {
+interface HeroProps {
+  dict: any;
+  locale: string;
+}
+
+export function Hero({ dict, locale }: HeroProps) {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full py-20 md:py-32">
@@ -15,7 +20,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-primary font-semibold text-sm tracking-wide uppercase mb-4"
           >
-            Senior UX Designer & CX Strategist
+            {dict.hero.role}
           </motion.p>
 
           <motion.h1
@@ -35,10 +40,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary max-w-2xl leading-relaxed"
           >
-            I design experiences that bridge business strategy and human
-            insight. 15+ years shaping end-to-end digital products for global
-            brands &mdash; from CX strategy through high-fidelity UI to
-            production delivery.
+            {dict.hero.description}
           </motion.p>
 
           <motion.div
@@ -48,16 +50,16 @@ export function Hero() {
             className="mt-8 md:mt-10 flex flex-wrap gap-4"
           >
             <Link
-              href="/work"
+              href={`/${locale}/work`}
               className="inline-flex items-center px-6 py-3 bg-foreground text-background font-medium text-sm hover:bg-neutral-800 transition-colors"
             >
-              See my work
+              {dict.hero.cta}
             </Link>
             <Link
-              href="/contact"
+              href={`/${locale}/contact`}
               className="inline-flex items-center px-6 py-3 border border-border text-foreground font-medium text-sm hover:bg-neutral-100 transition-colors"
             >
-              Get in touch
+              {dict.hero.ctaSecondary}
             </Link>
           </motion.div>
         </div>

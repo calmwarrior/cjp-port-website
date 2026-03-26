@@ -4,27 +4,41 @@ import { LinkedInIcon } from "@/components/ui/LinkedInIcon";
 import { siteConfig } from "@/data/siteConfig";
 import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { getDictionary } from "@/lib/dictionaries";
+import type { Locale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Get in touch with Carolina Jofre Pfeil for UX design, CX strategy, or design consultancy. Available for projects in the UK, Chile, Spain, Germany, Italy, and globally. Contacto para proyectos de diseño UX y estrategia CX.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as Locale);
+  return {
+    title: dict.nav.contact,
+    description: dict.metadata.contactDescription,
+  };
+}
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as Locale);
+
   return (
     <div className="pt-28 md:pt-36 pb-20 md:pb-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-          {/* Left side */}
           <div>
             <AnimateOnScroll>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">
-                Let&apos;s talk
+                {dict.contact.title}
               </h1>
               <p className="mt-4 text-lg text-text-secondary leading-relaxed">
-                Whether you have a project in mind, need a design strategist, or
-                just want to connect &mdash; I&apos;d love to hear from you.
+                {dict.contact.intro}
               </p>
             </AnimateOnScroll>
 
@@ -50,7 +64,7 @@ export default function ContactPage() {
                     <LinkedInIcon className="w-5 h-5" />
                   </div>
                   <span className="text-sm font-medium">
-                    LinkedIn
+                    {dict.contact.linkedin}
                     <ArrowUpRight className="w-3 h-3 inline ml-1" />
                   </span>
                 </a>
@@ -65,9 +79,8 @@ export default function ContactPage() {
             </AnimateOnScroll>
           </div>
 
-          {/* Right side - Form */}
           <AnimateOnScroll delay={0.2}>
-            <ContactForm />
+            <ContactForm dict={dict} />
           </AnimateOnScroll>
         </div>
       </div>

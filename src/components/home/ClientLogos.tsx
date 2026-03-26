@@ -1,13 +1,17 @@
 import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import { siteConfig } from "@/data/siteConfig";
 
-export function ClientLogos() {
+interface ClientLogosProps {
+  dict: any;
+}
+
+export function ClientLogos({ dict }: ClientLogosProps) {
   return (
     <section className="py-16 border-y border-border bg-neutral-100/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <AnimateOnScroll>
           <p className="text-xs font-semibold text-text-muted tracking-wide uppercase text-center mb-10">
-            Trusted by global brands
+            {dict.home.trustedBy}
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.1}>

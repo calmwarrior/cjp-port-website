@@ -3,7 +3,11 @@
 import { useState, type FormEvent } from "react";
 import { Send } from "lucide-react";
 
-export function ContactForm() {
+interface ContactFormProps {
+  dict: any;
+}
+
+export function ContactForm({ dict }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
@@ -39,9 +43,9 @@ export function ContactForm() {
         <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
           <Send className="w-5 h-5 text-green-600" />
         </div>
-        <h3 className="text-lg font-semibold text-foreground">Message sent!</h3>
+        <h3 className="text-lg font-semibold text-foreground">{dict.contact.sent}</h3>
         <p className="mt-2 text-sm text-text-secondary">
-          Thanks for reaching out. I&apos;ll get back to you soon.
+          {dict.contact.sentDetail}
         </p>
       </div>
     );
@@ -54,7 +58,7 @@ export function ContactForm() {
           htmlFor="name"
           className="block text-sm font-medium text-foreground mb-1.5"
         >
-          Name
+          {dict.contact.nameLabel}
         </label>
         <input
           type="text"
@@ -62,7 +66,7 @@ export function ContactForm() {
           name="name"
           required
           className="w-full px-4 py-3 border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-          placeholder="Your name"
+          placeholder={dict.contact.namePlaceholder}
         />
       </div>
 
@@ -71,7 +75,7 @@ export function ContactForm() {
           htmlFor="email"
           className="block text-sm font-medium text-foreground mb-1.5"
         >
-          Email
+          {dict.contact.emailLabel}
         </label>
         <input
           type="email"
@@ -79,7 +83,7 @@ export function ContactForm() {
           name="email"
           required
           className="w-full px-4 py-3 border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-          placeholder="your@email.com"
+          placeholder={dict.contact.emailPlaceholder}
         />
       </div>
 
@@ -88,7 +92,7 @@ export function ContactForm() {
           htmlFor="message"
           className="block text-sm font-medium text-foreground mb-1.5"
         >
-          Message
+          {dict.contact.messageLabel}
         </label>
         <textarea
           id="message"
@@ -96,7 +100,7 @@ export function ContactForm() {
           required
           rows={5}
           className="w-full px-4 py-3 border border-border bg-surface text-foreground text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
-          placeholder="Tell me about your project..."
+          placeholder={dict.contact.messagePlaceholder}
         />
       </div>
 
@@ -106,10 +110,10 @@ export function ContactForm() {
         className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-medium text-sm hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === "sending" ? (
-          "Sending..."
+          dict.contact.sending
         ) : (
           <>
-            Send message
+            {dict.contact.send}
             <Send className="w-4 h-4" />
           </>
         )}
@@ -117,7 +121,7 @@ export function ContactForm() {
 
       {status === "error" && (
         <p className="text-sm text-red-600">
-          Something went wrong. Please try emailing me directly.
+          {dict.contact.error}
         </p>
       )}
     </form>
