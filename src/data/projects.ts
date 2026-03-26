@@ -14,7 +14,7 @@ export const projects: Project[] = [
     category: "Product Design \u00b7 Financial Services",
     coverImage: "/images/projects/retailer/cover.jpg",
     coverColor: "#2E7D32",
-    coverPosition: "center 20%",
+    coverPosition: "center",
     challenge:
       "One of Britain\u2019s most recognised retailers was reimagining its financial services digital experience \u2014 money management and home insurance products used by millions. The products demanded a balance between brand warmth, regulatory compliance, accessibility, and the emotional clarity that financial decisions require. I was brought in to embed directly within their internal product design and UX research team, operating across website and app, within their established design systems, review cycles, and product culture.",
     process: [
