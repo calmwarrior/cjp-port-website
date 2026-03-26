@@ -26,7 +26,7 @@ export function ProjectGrid() {
                 >
                   {/* Cover image area */}
                   <div
-                    className="aspect-[16/10] relative overflow-hidden"
+                    className="aspect-[16/9] relative overflow-hidden"
                     style={{ backgroundColor: project.coverColor + "15" }}
                   >
                     <Image

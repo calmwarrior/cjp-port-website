@@ -33,7 +33,7 @@ export default function WorkPage() {
                 <article className="border border-border bg-surface hover:border-primary/30 transition-colors">
                   {/* Image area */}
                   <div
-                    className="aspect-[16/10] overflow-hidden relative"
+                    className="aspect-[16/9] overflow-hidden relative"
                     style={{ backgroundColor: project.coverColor + "15" }}
                   >
                     <Image
