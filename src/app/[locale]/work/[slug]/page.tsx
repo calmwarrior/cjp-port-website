@@ -47,7 +47,7 @@ export default async function CaseStudyPage({
 
   return (
     <article className="pt-28 md:pt-36 pb-20 md:pb-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <AnimateOnScroll>
           <Link
             href={`/${locale}/work`}
@@ -108,7 +108,7 @@ export default async function CaseStudyPage({
             className="mt-12 aspect-[21/9] overflow-hidden relative"
             style={{ backgroundColor: project.coverColor + "12" }}
           >
-            <Image src={project.coverImage} alt={project.title} fill className="object-cover" sizes="100vw" priority />
+            <Image src={project.heroImage || project.coverImage} alt={project.title} fill className="object-cover" sizes="100vw" priority />
           </div>
         </AnimateOnScroll>
 

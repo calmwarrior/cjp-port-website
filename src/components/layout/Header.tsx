@@ -49,7 +49,7 @@ export function Header({ locale, dict }: HeaderProps) {
             : "bg-transparent"
         )}
       >
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <nav className="flex items-center justify-between h-16 md:h-20">
             <Link
               href={`/${locale}`}

@@ -10,7 +10,7 @@ interface AboutTeaserProps {
 export function AboutTeaser({ dict, locale }: AboutTeaserProps) {
   return (
     <section className="py-20 md:py-28 bg-neutral-100/50 border-t border-border">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="max-w-3xl">
           <AnimateOnScroll>
             <h2 className="text-sm font-semibold text-primary tracking-wide uppercase mb-4">

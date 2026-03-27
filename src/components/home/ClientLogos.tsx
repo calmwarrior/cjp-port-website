@@ -8,7 +8,7 @@ interface ClientLogosProps {
 export function ClientLogos({ dict }: ClientLogosProps) {
   return (
     <section className="py-16 border-y border-border bg-neutral-100/50">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <AnimateOnScroll>
           <p className="text-xs font-semibold text-text-muted tracking-wide uppercase text-center mb-10">
             {dict.home.trustedBy}

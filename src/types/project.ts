@@ -11,6 +11,7 @@ export interface Project {
   tools?: string[];
   category: string;
   coverImage: string;
+  heroImage?: string;
   coverColor: string;
   coverPosition?: string;
   coverFit?: "cover" | "contain";

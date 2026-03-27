@@ -12,7 +12,7 @@ interface FooterProps {
 export function Footer({ locale, dict }: FooterProps) {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12 md:py-16">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="space-y-4">

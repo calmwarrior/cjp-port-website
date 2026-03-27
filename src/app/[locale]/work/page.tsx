@@ -30,7 +30,7 @@ export default async function WorkPage({
 
   return (
     <div className="pt-28 md:pt-36 pb-20 md:pb-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <AnimateOnScroll>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">
             {dict.work.title}
@@ -42,9 +42,9 @@ export default async function WorkPage({
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <AnimateOnScroll key={project.slug} delay={index * 0.1}>
-              <Link href={`/${locale}/work/${project.slug}`} className="group block">
-                <article className="border border-border bg-surface hover:border-foreground/20 transition-colors">
+            <AnimateOnScroll key={project.slug} delay={index * 0.1} className="h-full">
+              <Link href={`/${locale}/work/${project.slug}`} className="group block h-full">
+                <article className="h-full flex flex-col border border-border bg-surface hover:border-foreground/20 transition-colors">
                   <div
                     className="aspect-[4/3] overflow-hidden relative"
                     style={{ backgroundColor: project.coverColor + "15" }}
@@ -59,7 +59,7 @@ export default async function WorkPage({
                     />
                   </div>
 
-                  <div className="p-6 md:p-8">
+                  <div className="flex-1 flex flex-col p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-xs font-medium px-3 py-1 rounded-full bg-neutral-100 text-text-secondary">
                         {project.category}
@@ -79,7 +79,7 @@ export default async function WorkPage({
                     <p className="mt-3 text-sm text-text-secondary line-clamp-2">
                       {project.challenge.slice(0, 160)}...
                     </p>
-                    <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground">
+                    <div className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground">
                       {dict.work.readCaseStudy}
                       <ArrowUpRight className="w-4 h-4" />
                     </div>

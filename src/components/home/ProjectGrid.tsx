@@ -15,7 +15,7 @@ interface ProjectGridProps {
 export function ProjectGrid({ dict, locale }: ProjectGridProps) {
   return (
     <section className="py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <AnimateOnScroll>
           <h2 className="text-sm font-semibold text-primary tracking-wide uppercase mb-12">
             {dict.home.selectedWork}
@@ -24,10 +24,10 @@ export function ProjectGrid({ dict, locale }: ProjectGridProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <AnimateOnScroll key={project.slug} delay={index * 0.1}>
-              <Link href={`/${locale}/work/${project.slug}`} className="group block">
+            <AnimateOnScroll key={project.slug} delay={index * 0.1} className="h-full">
+              <Link href={`/${locale}/work/${project.slug}`} className="group block h-full">
                 <motion.article
-                  className="relative overflow-hidden border border-border bg-surface"
+                  className="h-full flex flex-col relative overflow-hidden border border-border bg-surface"
                 >
                   {/* Cover image area */}
                   <div
@@ -50,7 +50,7 @@ export function ProjectGrid({ dict, locale }: ProjectGridProps) {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
+                  <div className="flex-1 flex flex-col p-6">
                     <div className="flex items-start justify-between gap-4">
                       <div>
                         <h3 className="font-semibold text-lg text-foreground leading-snug">

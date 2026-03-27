@@ -12,7 +12,7 @@ interface HeroProps {
 export function Hero({ dict, locale }: HeroProps) {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full py-20 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full py-20 md:py-32">
         <div className="max-w-4xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}

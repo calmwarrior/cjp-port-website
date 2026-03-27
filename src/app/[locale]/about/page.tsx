@@ -30,7 +30,7 @@ export default async function AboutPage({
 
   return (
     <div className="pt-28 md:pt-36 pb-20 md:pb-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         {/* Header */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-12 md:gap-16">
           <AnimateOnScroll>

@@ -8,7 +8,7 @@ interface CapabilitiesStripProps {
 export function CapabilitiesStrip({ dict }: CapabilitiesStripProps) {
   return (
     <section className="py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <AnimateOnScroll>
           <h2 className="text-sm font-semibold text-primary tracking-wide uppercase mb-4">
             {dict.home.whatIDo}
